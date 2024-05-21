@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-05-2024 a las 20:56:07
--- Versión del servidor: 10.4.28-MariaDB
--- Versión de PHP: 8.2.4
+-- Tiempo de generación: 21-05-2024 a las 03:13:36
+-- Versión del servidor: 10.4.32-MariaDB
+-- Versión de PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -66,22 +66,8 @@ CREATE TABLE `migrations` (
 --
 
 INSERT INTO `migrations` (`id`, `timestamp`, `name`) VALUES
-(1, 1715694691187, 'ChangeUser1715694691187');
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `pacientes`
---
-
-CREATE TABLE `pacientes` (
-  `Nombre` varchar(30) NOT NULL,
-  `Apellidos` varchar(30) NOT NULL,
-  `Direccion` varchar(100) NOT NULL,
-  `Correo` varchar(25) NOT NULL,
-  `Nro Celular` varchar(10) NOT NULL,
-  `Documento` int(8) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+(1, 1715694691187, 'ChangeUser1715694691187'),
+(2, 1716168158166, 'ChangeUser1716168158166');
 
 -- --------------------------------------------------------
 
@@ -155,9 +141,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `created_at`, `updated_at`, `name`, `lastname`, `username`, `email`, `password`, `city`, `province`, `role`) VALUES
-('2388ab8d-73d0-4531-b96f-28f088871f31', '2024-05-14 14:30:25.898224', '2024-05-14 14:30:25.898224', 'ema', 'Ramirez', 'Ema', 'Ema@uwu', '12345678', 'MAIPU', 'Mendoza', ''),
-('f74252f7-cf55-442f-9551-d467d34c69b0', '2024-05-14 14:31:15.291319', '2024-05-14 14:31:15.291319', 'ema', 'Ramirez', 'tatata', 'ramirezemanuel137@gmail.com', '12', 'MAIPU', 'Mendoza', ''),
-('f7fdee85-a8f6-43cd-bb6d-0360fc63b59c', '2024-05-14 14:29:48.191646', '2024-05-14 14:29:48.191646', 'ema', 'Ramirez', 'Ema', 'ramirezemanuel137@gmail.com', '12345678', 'MAIPU', 'Mendoza', '');
+('1588c8a9-6a6d-43c9-b9ef-78511e7c60a3', '2024-05-21 00:27:38.508452', '2024-05-21 01:12:28.000000', 'Walter', 'Trentacosta', 'Walter748', 'waltertrentacosta11@gmail.com', '123456', 'Maipu', 'Mendoza', 'USER');
 
 --
 -- Índices para tablas volcadas
@@ -218,7 +202,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Restricciones para tablas volcadas

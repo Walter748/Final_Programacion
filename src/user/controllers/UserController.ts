@@ -36,9 +36,7 @@ export class UserController {
       if (!data) {
         return this.httpResponse.NotFound(res, "No existe datos");
       }
-      if (datausuario?.role == ""){
-        return res.render("editCliente",{user:datausuario})
-      }else{
+      else{
         return res.render("edit", {
         user: data,
       });
@@ -56,12 +54,9 @@ export class UserController {
     email = email?.toString() || ""; 
     const usuario = await this.userService.findUserByEmail(email);
     console.log(data,usuario)
-    if (data.email == usuario?.email && data.password == usuario?.password && usuario?.role == "ADMIN" ){
+    if (data.email == usuario?.email && data.password == usuario?.password){
       res.render("./index")
-    }else if (data.email == usuario?.email && data.password == usuario?.password && usuario?.role == "" ){
-      res.render("./indexCliente")
-    } 
-    else{
+    }else{
       res.render("./error");
     }
   }
@@ -105,7 +100,7 @@ export class UserController {
       });
     } catch (err) {
       res.render("message", {
-        message: `Erro ao buscar usuário:`
+        message: `Error al buscar usuario:`
       });
     }
   }
@@ -126,11 +121,8 @@ export class UserController {
       );
       if (!data.affected) {
         return this.httpResponse.NotFound(res, "Error al actualizar");
-      }
-      if (datausuario?.role == ""){
-        res.render ("indexCliente")
       }else{
-      res.render("./index")}
+        res.render("./index")}
     }catch (e) {
       return this.httpResponse.Error(res, e);
     }

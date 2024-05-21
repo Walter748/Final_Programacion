@@ -23,10 +23,6 @@ export class UserRouter extends BaseRouter<UserController> {
 this.router.get("/index", (req, res) => {
       res.render("index");
     });
-//rutas lado cliente 
-this.router.get("/indexCliente", (req, res) => {
-  res.render("indexCliente")});
-
 
 // rutas para el ADMINISTRADOS 
    

@@ -5,8 +5,8 @@ body {
   max-height: 100vh!important;
 
   --s: 34px; /* control the size (the circle diameter) */
-  --c1: #fff;
-  --c2: #159f3a;
+  --c1: #ffffff8a;
+  --c2: #8a87878a;
   
   --_g: radial-gradient(calc(var(--s)/2),var(--c1) 97%,#0000);
   background:
@@ -31,25 +31,25 @@ table {
 }
 
 .primary-btn {
-  background-color: #6495ed;
-  color: #fff;
+  transition: box_shadow 0.3s ease;
+  background-color: #6494ed;
+  cursor: pointer;
 }
 
 .primary-btn:hover {
-  background-color: transparent;
-  border-color: #6495ed;
-  color: #6495ed;
-}
-
-.secondary-btn {
-  background-color: transparent;
-  border-color: #6495ed;
-  color: #6495ed;
+  background-color: #42629c;
+  color: #fff;
 }
 
 .secondary-btn:hover {
-  background-color: #6495ed;
+  background-color: #42629c;
   color: #fff;
+}
+
+.secondary-btn {
+  transition: box_shadow 0.3s ease;
+  background-color: #6494ed;
+  cursor: pointer;
 }
 
 .edit-btn {
@@ -82,7 +82,7 @@ table {
 }
 
 .form-control-me-2 {
-  background-color: greenyellow;
+  background-color: #6494ed5e;
   border-color: white;
   border-radius: 10px;
 }
